@@ -69,25 +69,34 @@ iframe {
 }
 
 #login{
-    width: 30%;
+    width: 400px;
     margin: auto;
     background-color: #373737;
     border-radius: 10px;
     margin-top: 200px;
-    -webkit-box-shadow: 0 0 12px 	#373737 /*{b-active-background-color}*/;
-	-moz-box-shadow: 0 0 12px 		#373737 /*{b-active-background-color}*/;
-	box-shadow: 0 0 12px 			#373737 /*{b-active-background-color}*/;
-    padding: 10px;
+    -webkit-box-shadow: 0 0 12px 	rgba(0,0,0,0.7) /*{b-active-background-color}*/;
+	-moz-box-shadow: 0 0 12px 		rgba(0,0,0,0.7) /*{b-active-background-color}*/;
+	/*box-shadow: 0 0 12px 			#373737 /*{b-active-background-color}*/;
+    padding: 20px;
+    box-shadow: rgba(0,0,0,0.7) 0 4px 10px -1px;
+}
+
+@media only screen and (max-width: 400px){
+    #login{
+        width: 86%;
+        margin-top: 40px;
+    }
 }
 
 @media only screen and (min-width: 34em) {
     
     .col {
-	padding: 0 1.5em;
-}
-.row .row {
-	margin: 0 -1.5em;
-}
+        padding: 0 1.5em;
+    }
+    
+    .row .row {
+        margin: 0 -1.5em;
+    }
     
     body { font-size: 1em; }
     
