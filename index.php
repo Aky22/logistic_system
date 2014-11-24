@@ -11,13 +11,6 @@
     
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
-
-    <script>
-		$( document ).on( "pagecreate", function() {
-				var themeClass = "b";
-				$( ".container" ).removeClass( "ui-page-theme-a ui-page-theme-b" ).addClass( "ui-page-theme-" + themeClass );
-		});
-	</script>
     
     <!-- jquery mobile css file -->
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
@@ -62,13 +55,20 @@
             echo '<div data-role="navbar">
                 <ul>
                     <li><a href="index.php" class="ui-btn-active ui-state-persist">Homepage</a></li>
-                    <li><a href="#">Menu item 2</a></li>
-                    <li><a href="#">Menu item 3</a></li>
+                    <li><a href="index.php?logout=1">Logout</a></li>
+                    <li><a href="#" id="themechanger">Menu item 3</a></li>
                     <li><a href="#">Menu item 3</a></li>
                     <li><a href="#">Menu item 3</a></li>
                 </ul>
             </div>';
         }
+
+    if(isset($_GET['logout']))
+    {
+        session_destroy();
+        unset($_SESSION);
+        header("Location: index.php");
+    }
     ?>
 </div>
 

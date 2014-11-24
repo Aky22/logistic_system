@@ -2,8 +2,8 @@
     session_start();
     if(isset($_POST['submit']))
     {
-        $varname = array('username', 'pass', 'remember');
-        $messagename = array('Username', 'Passworld', 'Remember');
+        $varname = array('username', 'pass');
+        $messagename = array('Username', 'Passworld');
         
         require_once('include/config.inc.php');
         require_once('include/functions.php');
