@@ -36,22 +36,22 @@
     <div id="login">
         <form method="post" action="index.php">
             <div class="ui-field-contain">
-                <label for="username">Username:</label>
+                <label for="username">Felhasználónév:</label>
                 <input type="text" name="username" id="username" value="<?php echo isset($_COOKIE['username']) ? $_COOKIE['username'] : ''; ?>" data-clear-btn="true">
             </div>
             <div class="ui-field-contain">
-                <label for="pass">Passworld:</label>
+                <label for="pass">Jelszó:</label>
                 <input type="password" name="pass" id="pass" value="<?php echo isset($_COOKIE['pass']) ? $_COOKIE['pass'] : ''; ?>" data-clear-btn="true">
             </div>
             <div class="ui-field-contain">
-				<label for="remember">Remember me:</label>
+				<label for="remember">Emlékezz rám:</label>
 				<select name="remember" id="remember" data-role="flipswitch">
-					<option value="0">No</option>
-					<option value="1">Yes</option>
+					<option value="0">Nem</option>
+					<option value="1">Igen</option>
 				</select>
 			</div>
             <div class="ui-field-contain">
-                <input type="submit" id="submit-1" value="Login" name="submit">
+                <input type="submit" id="submit-1" value="Bejelentkezés" name="submit">
             </div>
         </form>
     </div>
