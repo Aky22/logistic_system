@@ -17,11 +17,19 @@
     
 	<!-- general boring stuff and some visual tweaks -->
 	<link rel="stylesheet" href="css/screen.css">
+    
+    <script>
+        if(window.innerWidth > 800){
+            $(document).on('pagebeforeshow', 'body', function(){       
+                $( "#menu" ).panel( "open");
+            });
+        }
+    </script>
 
 </head>
 <body>
 
-<div class="container" data-role="page">
+<div class="container ui-responsive-panel" data-role="page">
     <?php
         if(!isset($_SESSION['username']))
         {
@@ -59,7 +67,7 @@
             echo '<div class="ui-content" role="main">
                     
                 </div>';
-            echo '<div data-role="panel" id="menu">
+            echo '<div data-role="panel" id="menu" data-dismissible="false" data-position-fixed=true>
                     <ul data-role="listview">
                         <!--<li data-icon="delete"><a href="#" data-rel="close">Bezárás</a></li>-->
                         <li><a href="index.php">Kezdőlap</a></li>
