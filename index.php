@@ -37,12 +37,12 @@
                 <input type="password" name="pass" id="pass" value="<?php echo isset($_COOKIE['pass']) ? $_COOKIE['pass'] : ''; ?>" data-clear-btn="true">
             </div>
             <div class="ui-field-contain">
-				<label for="remember">Emlékezz rám:</label>
-				<select name="remember" id="remember" data-role="flipswitch">
-					<option value="0">Nem</option>
-					<option value="1">Igen</option>
-				</select>
-			</div>
+                <label for="remember">Emlékezz rám:</label>
+                <select name="remember" id="remember" data-role="flipswitch">
+                    <option value="0">Nem</option>
+                    <option value="1" <?php echo (isset($_COOKIE['username']) ? 'selected=""' : ''); ?>>Igen</option>
+                </select>
+            </div>
             <div class="ui-field-contain">
                 <input type="submit" id="submit-1" value="Bejelentkezés" name="submit">
             </div>
@@ -52,15 +52,24 @@
         }
         else
         {
-            echo '<div data-role="navbar">
-                <ul>
-                    <li><a href="index.php" class="ui-btn-active ui-state-persist">Homepage</a></li>
-                    <li><a href="index.php?logout=1">Logout</a></li>
-                    <li><a href="#" id="themechanger">Menu item 3</a></li>
-                    <li><a href="#">Menu item 3</a></li>
-                    <li><a href="#">Menu item 3</a></li>
-                </ul>
-            </div>';
+            echo '<div data-role="header">
+                    <h1>Logistic system</h1>
+                    <a href="#menu" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid ui-btn-icon-notext">Menu</a>
+                </div>';
+            echo '<div class="ui-content" role="main">
+                    
+                </div>';
+            echo '<div data-role="panel" id="menu">
+                    <ul data-role="listview">
+                        <!--<li data-icon="delete"><a href="#" data-rel="close">Bezárás</a></li>-->
+                        <li><a href="index.php">Kezdőlap</a></li>
+                        <li><a href="?logout=1">Kijelentkezés</a></li>
+                        <li><a href="#">List item</a></li>
+                    </ul>
+                    <br><br>
+                    
+                </div>';
+            
         }
 
     if(isset($_GET['logout']))
