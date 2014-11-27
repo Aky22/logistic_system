@@ -19,17 +19,23 @@
 	<link rel="stylesheet" href="css/screen.css">
     
     <script>
-        if(window.innerWidth > 800){
-            $(document).on('pagebeforeshow', 'body', function(){       
-                $( "#menu" ).panel( "open");
+        $( document ).on( "pagecreate", ".jqm-demos", function( event ) {
+            var page = page = $( this );
+            // Global navmenu panel
+            $( ".jqm-navmenu-panel ul" ).listview();
+
+            $( ".jqm-navmenu-link" ).on( "click", function() {
+                page.find( ".jqm-navmenu-panel:not(.jqm-panel-page-nav)" ).panel( "open" );
             });
-        }
+
+
+        });
     </script>
 
 </head>
 <body>
 
-<div class="container ui-responsive-panel" data-role="page">
+<div class="container jqm-demos" data-role="page">
     <?php
         if(!isset($_SESSION['username']))
         {
@@ -60,18 +66,39 @@
         }
         else
         {
-            echo '<div data-role="header">
+            echo '<div data-role="header" class="jqm-header">
                     <h1>Logistic system</h1>
-                    <a href="#menu" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-grid ui-btn-icon-notext">Menu</a>
+                    <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
                 </div>';
-            echo '<div class="ui-content" role="main">
+            echo '<div class="ui-content jqm-content" role="main">
                     
                 </div>';
-            echo '<div data-role="panel" id="menu" data-dismissible="false" data-position-fixed=true>
-                    <ul data-role="listview">
+            echo '<div data-role="panel" id="menu" data-position="left" data-display="overlay" class="jqm-navmenu-panel">
+                    <ul data-role="listview" class="jqm-list ui-alt-icon ui-nodisc-icon">
                         <!--<li data-icon="delete"><a href="#" data-rel="close">Bezárás</a></li>-->
                         <li><a href="index.php">Kezdőlap</a></li>
                         <li><a href="?logout=1">Kijelentkezés</a></li>
+                        <li><a href="#">Új megrendelés</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
+                        <li><a href="#">List item</a></li>
                         <li><a href="#">List item</a></li>
                     </ul>
                     <br><br>
