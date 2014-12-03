@@ -11,6 +11,7 @@
     
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/autocomplete.js"></script>
     
     <!-- jquery mobile css file -->
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
@@ -39,30 +40,7 @@
     <?php
         if(!isset($_SESSION['username']))
         {
-    ?>
-    <div id="login">
-        <form method="post" action="index.php">
-            <div class="ui-field-contain">
-                <label for="username">Felhasználónév:</label>
-                <input type="text" name="username" id="username" value="<?php echo isset($_COOKIE['username']) ? $_COOKIE['username'] : ''; ?>" data-clear-btn="true">
-            </div>
-            <div class="ui-field-contain">
-                <label for="pass">Jelszó:</label>
-                <input type="password" name="pass" id="pass" value="<?php echo isset($_COOKIE['pass']) ? $_COOKIE['pass'] : ''; ?>" data-clear-btn="true">
-            </div>
-            <div class="ui-field-contain">
-                <label for="remember">Emlékezz rám:</label>
-                <select name="remember" id="remember" data-role="flipswitch">
-                    <option value="0">Nem</option>
-                    <option value="1" <?php echo (isset($_COOKIE['username']) ? 'selected=""' : ''); ?>>Igen</option>
-                </select>
-            </div>
-            <div class="ui-field-contain">
-                <input type="submit" id="submit-1" value="Bejelentkezés" name="submit">
-            </div>
-        </form>
-    </div>
-    <?php
+            header("Location: index.php");
         }
         else
         {
@@ -71,7 +49,19 @@
                     <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
                 </div>';
             echo '<div class="ui-content jqm-content" role="main">
-                    
+                    <label for="date">Megrendelés dátuma:</label>
+                    <input type="date" name="date" id="date" value="">
+                    <ul class="autocomplete"  data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Munkaadó neve" data-filter-theme="e"></ul>
+                    <label for="billingaddress">Számlázási cím:</label>
+                    <input type="text" name="billingaddress" id="billingaddress" value="">
+                    <label for="shippingaddress">Postázási cím:</label>
+                    <input type="text" name="shippingaddress" id="shippingaddress" value="">
+                    <label for="contact">Kapcsolattartó:</label>
+                    <input type="text" name="contact" id="contact" value="">
+                    <label for="tel">Telefon:</label>
+                    <input type="tel" name="tel" id="tel" value="">
+                    <label for="enddate">Elkészülési határidő:</label>
+                    <input type="date" name="enddate" id="enddate" value="">
                 </div>';
             echo '<div data-role="panel" id="menu" data-position="left" data-display="overlay" class="jqm-navmenu-panel">
                     <ul data-role="listview" class="jqm-list ui-alt-icon ui-nodisc-icon">
