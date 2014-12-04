@@ -21,7 +21,7 @@ $(document).on( "pageinit", ".container", function() {
         $ul.listview( "refresh" );
         $.ajax({
             //url: "http://gd.geobytes.com/AutoCompleteCity",
-            url: "include/employer_select.php",
+            url: "include/company_select.php",
             dataType: "jsonp",
             crossDomain: true,
             data: {
@@ -53,7 +53,7 @@ $( document).on( "click", ".autocomplete li", function() {
   $(this).parent().parent().find('input').val(selectedItem);
     
     $.ajax({
-        url: "include/employer.php",
+        url: "include/company.php",
         dataType: "json",
         crossDomain: true,
         data: {

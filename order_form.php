@@ -66,9 +66,64 @@
                         <input type="date" name="enddate" id="enddate" value="">
                     </div>
                     <div class="ui-block-b">
-                        <label for="purchaseplace" class="select">Anyagbeszerzési hely:</label>
                         <select name="purchaseplace" id="purchaseplace" data-native-menu="false">
                             <option>Anyagbeszerzési hely</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                        </select>
+                        <select name="materialthickness" id="materialthickness" data-native-menu="false">
+                            <option>Anyagvastagság</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                        </select>
+                        <select name="mastercolor" id="mastercolor" data-native-menu="false">
+                            <option>Főszín</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                        </select>
+                        <select name="distinctcolor" id="distinctcolor" data-native-menu="false">
+                            <option>Elütő színe</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                        </select>
+                        <select name="paszpolcolor" id="paszpolcolor" data-native-menu="false">
+                            <option>Paszpol színe</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                        </select>
+                        <select name="logo" id="logo" data-native-menu="false">
+                            <option>Logózás</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                        </select>
+                        <select name="label" id="label" data-native-menu="false">
+                            <option>Címke</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                        </select>
+                        <select name="delivery" id="delivery" data-native-menu="false">
+                            <option>Kiszállítás</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                        </select>
+                        <select name="packing" id="packing" data-native-menu="false">
+                            <option>Csomagolás</option>
                             <option value="standard">Standard: 7 day</option>
                             <option value="rush">Rush: 3 days</option>
                             <option value="express">Express: next day</option>

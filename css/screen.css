@@ -409,6 +409,12 @@ iframe {
 	color: #fff;
 }
 
+.ui-block-a,
+.ui-block-b,
+.ui-block-c {
+    padding-left: 8px;
+}
+
 @media (max-width: 40em){
     .ui-block-a,
     .ui-block-b,
@@ -484,10 +490,10 @@ iframe {
 		margin-bottom: 3em;
 	}
 	.jqm-demos .jqm-content {
-		width: 76%;
+		width: 72%;
 		padding-top: 2em;
-		/*padding-left: 5%;*/
-		/*padding-right: 3%;*/
+		padding-left: 5%;
+		padding-right: 3%;
 		float: right;
 	}
     .jqm-demos .jqm-content.jqm-fullwidth {
