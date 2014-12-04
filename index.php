@@ -11,6 +11,7 @@
     
     <script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/autocomplete.js"></script>
     
     <!-- jquery mobile css file -->
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">

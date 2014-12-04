@@ -409,6 +409,15 @@ iframe {
 	color: #fff;
 }
 
+@media (max-width: 40em){
+    .ui-block-a,
+    .ui-block-b,
+    .ui-block-c {
+        float: none;
+        width: 100% !important;
+    }
+}
+
 @media (min-width: 60em) {
 	.jqm-demos .jqm-header h2 {
 		padding: 1em 0 .7em;
@@ -447,7 +456,7 @@ iframe {
 		left: 0;
 		clip: initial;
 		float: left;
-		width: 25%;
+		width: 20%;
 		background: none;
 		-webkit-transition: none !important;
 		-moz-transition: none !important;
@@ -475,10 +484,10 @@ iframe {
 		margin-bottom: 3em;
 	}
 	.jqm-demos .jqm-content {
-		width: 67%;
+		width: 76%;
 		padding-top: 2em;
-		padding-left: 5%;
-		padding-right: 3%;
+		/*padding-left: 5%;*/
+		/*padding-right: 3%;*/
 		float: right;
 	}
     .jqm-demos .jqm-content.jqm-fullwidth {

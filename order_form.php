@@ -49,19 +49,34 @@
                     <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
                 </div>';
             echo '<div class="ui-content jqm-content" role="main">
-                    <label for="date">Megrendelés dátuma:</label>
-                    <input type="date" name="date" id="date" value="">
-                    <ul class="autocomplete"  data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Munkaadó neve" data-filter-theme="e"></ul>
-                    <label for="billingaddress">Számlázási cím:</label>
-                    <input type="text" name="billingaddress" id="billingaddress" value="">
-                    <label for="shippingaddress">Postázási cím:</label>
-                    <input type="text" name="shippingaddress" id="shippingaddress" value="">
-                    <label for="contact">Kapcsolattartó:</label>
-                    <input type="text" name="contact" id="contact" value="">
-                    <label for="tel">Telefon:</label>
-                    <input type="tel" name="tel" id="tel" value="">
-                    <label for="enddate">Elkészülési határidő:</label>
-                    <input type="date" name="enddate" id="enddate" value="">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <label for="date">Megrendelés dátuma:</label>
+                        <input type="date" name="date" id="date" value="">
+                        <ul class="autocomplete"  data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Megrendelő neve" data-filter-theme="e"></ul>
+                        <label for="billingaddress">Számlázási cím:</label>
+                        <input type="text" name="billingaddress" id="billingaddress" value="">
+                        <label for="shippingaddress">Postázási cím:</label>
+                        <input type="text" name="shippingaddress" id="shippingaddress" value="">
+                        <label for="contact">Kapcsolattartó:</label>
+                        <input type="text" name="contact" id="contact" value="">
+                        <label for="tel">Telefon:</label>
+                        <input type="tel" name="tel" id="tel" value="">
+                        <label for="enddate">Elkészülési határidő:</label>
+                        <input type="date" name="enddate" id="enddate" value="">
+                    </div>
+                    <div class="ui-block-b">
+                        <label for="purchaseplace" class="select">Anyagbeszerzési hely:</label>
+                        <select name="purchaseplace" id="purchaseplace" data-native-menu="false">
+                            <option>Anyagbeszerzési hely</option>
+                            <option value="standard">Standard: 7 day</option>
+                            <option value="rush">Rush: 3 days</option>
+                            <option value="express">Express: next day</option>
+                            <option value="overnight">Overnight</option>
+                        </select>
+                    </div>
+                    <div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
+                </div><!-- /grid-a -->
                 </div>';
             echo '<div data-role="panel" id="menu" data-position="left" data-display="overlay" class="jqm-navmenu-panel">
                     <ul data-role="listview" class="jqm-list ui-alt-icon ui-nodisc-icon">

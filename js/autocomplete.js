@@ -38,7 +38,14 @@ $(document).on( "pageinit", ".container", function() {
         });
     }
   });
-});	
+});
+
+$(document).on('click', '.ui-input-clear', function () {
+    $('#billingaddress').val('');
+    $('#shippingaddress').val('');
+    $('#contact').val('');
+    $('#tel').val('');
+});
 
 // click to select value of auto-complete
 $( document).on( "click", ".autocomplete li", function() {      
