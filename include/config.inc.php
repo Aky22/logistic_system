@@ -3,7 +3,7 @@
 	
 	define('DB_NAME', 'logistic_system');
 	define('DB_USER', 'root');
-	define('DB_PASS', '');
+	define('DB_PASS', 'root');
 	define('DB_HOST', 'localhost');
 	
 	/*********************PAGE*********************/

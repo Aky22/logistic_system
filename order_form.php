@@ -44,6 +44,23 @@
         }
         else
         {
+            require_once('include/config.inc.php');
+            require_once('include/my_mysqli.php');
+            
+            $db = new my_mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+            $sql_nagykerek = "SELECT * FROM `nagykerek`";
+            $result_nagykerek = $db->select($sql_nagykerek);
+            
+            $sql_anyag = "SELECT * FROM `anyagszin`";
+            $result_anyag = $db->select($sql_anyag);
+            
+            $sql_szita = "SELECT * FROM `szitahimzes`";
+            $result_szita = $db->select($sql_szita);
+            
+            $sql_csomagolas = "SELECT * FROM `csomagolas`";
+            $result_csomaglas = $db->select($sql_csomagolas);
+            
             echo '<div data-role="header" class="jqm-header">
                     <h1>Logistic system</h1>
                     <a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
@@ -67,47 +84,47 @@
                     </div>
                     <div class="ui-block-b">
                         <select name="purchaseplace" id="purchaseplace" data-native-menu="false">
-                            <option>Anyagbeszerzési hely</option>
-                            <option value="standard">Standard: 7 day</option>
-                            <option value="rush">Rush: 3 days</option>
-                            <option value="express">Express: next day</option>
-                            <option value="overnight">Overnight</option>
-                        </select>
+                            <option>Anyagbeszerzési hely</option>';
+                            for ($i = 0; $i < count($result_nagykerek); $i++)
+                            {
+                                echo '<option value="'.$result_nagykerek[$i]['nagykernev'].'">'.$result_nagykerek[$i]['nagykernev'].'</option>';
+                            }
+                        echo '</select>
                         <select name="materialthickness" id="materialthickness" data-native-menu="false">
-                            <option>Anyagvastagság</option>
-                            <option value="standard">Standard: 7 day</option>
-                            <option value="rush">Rush: 3 days</option>
-                            <option value="express">Express: next day</option>
-                            <option value="overnight">Overnight</option>
-                        </select>
+                            <option>Anyagvastagság</option>';
+                            for ($i = 0; $i < count($result_anyag); $i++)
+                            {
+                                echo '<option value="'.$result_anyag[$i]['anyagszin'].'">'.$result_anyag[$i]['anyagszin'].'</option>';
+                            }
+                        echo '</select>
                         <select name="mastercolor" id="mastercolor" data-native-menu="false">
-                            <option>Főszín</option>
-                            <option value="standard">Standard: 7 day</option>
-                            <option value="rush">Rush: 3 days</option>
-                            <option value="express">Express: next day</option>
-                            <option value="overnight">Overnight</option>
-                        </select>
+                            <option>Főszín</option>';
+                            for ($i = 0; $i < count($result_anyag); $i++)
+                            {
+                                echo '<option value="'.$result_anyag[$i]['anyagszin'].'">'.$result_anyag[$i]['anyagszin'].'</option>';
+                            }
+                    echo '</select>
                         <select name="distinctcolor" id="distinctcolor" data-native-menu="false">
-                            <option>Elütő színe</option>
-                            <option value="standard">Standard: 7 day</option>
-                            <option value="rush">Rush: 3 days</option>
-                            <option value="express">Express: next day</option>
-                            <option value="overnight">Overnight</option>
-                        </select>
+                            <option>Elütő színe</option>';
+                            for ($i = 0; $i < count($result_anyag); $i++)
+                            {
+                                echo '<option value="'.$result_anyag[$i]['anyagszin'].'">'.$result_anyag[$i]['anyagszin'].'</option>';
+                            }
+                    echo '</select>
                         <select name="paszpolcolor" id="paszpolcolor" data-native-menu="false">
-                            <option>Paszpol színe</option>
-                            <option value="standard">Standard: 7 day</option>
-                            <option value="rush">Rush: 3 days</option>
-                            <option value="express">Express: next day</option>
-                            <option value="overnight">Overnight</option>
-                        </select>
+                            <option>Paszpol színe</option>';
+                            for ($i = 0; $i < count($result_anyag); $i++)
+                            {
+                                echo '<option value="'.$result_anyag[$i]['anyagszin'].'">'.$result_anyag[$i]['anyagszin'].'</option>';
+                            }
+                    echo '</select>
                         <select name="logo" id="logo" data-native-menu="false">
-                            <option>Logózás</option>
-                            <option value="standard">Standard: 7 day</option>
-                            <option value="rush">Rush: 3 days</option>
-                            <option value="express">Express: next day</option>
-                            <option value="overnight">Overnight</option>
-                        </select>
+                            <option>Logózás</option>';
+                            for ($i = 0; $i < count($result_szita); $i++)
+                            {
+                                echo '<option value="'.$result_szita[$i]['szhID'].'">'.$result_szita[$i]['muvelet'].'</option>';
+                            }
+                    echo '</select>
                         <select name="label" id="label" data-native-menu="false">
                             <option>Címke</option>
                             <option value="standard">Standard: 7 day</option>
@@ -123,12 +140,12 @@
                             <option value="overnight">Overnight</option>
                         </select>
                         <select name="packing" id="packing" data-native-menu="false">
-                            <option>Csomagolás</option>
-                            <option value="standard">Standard: 7 day</option>
-                            <option value="rush">Rush: 3 days</option>
-                            <option value="express">Express: next day</option>
-                            <option value="overnight">Overnight</option>
-                        </select>
+                            <option>Csomagolás</option>';
+                            for ($i = 0; $i < count($result_csomaglas); $i++)
+                            {
+                                echo '<option value="'.$result_csomaglas[$i]['cs_ID'].'">'.$result_csomaglas[$i]['cs_csomagtip'].'</option>';
+                            }
+                    echo '</select>
                     </div>
                     <div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
                 </div><!-- /grid-a -->
