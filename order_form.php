@@ -94,7 +94,7 @@
                             <option>Anyagvastagság</option>';
                             for ($i = 0; $i < count($result_anyag); $i++)
                             {
-                                echo '<option value="'.$result_anyag[$i]['anyagszin'].'">'.$result_anyag[$i]['anyagszin'].'</option>';
+                                echo '<option value="'.$result_anyag[$i]['anyagsuly'].'">'.$result_anyag[$i]['anyagsuly'].'</option>';
                             }
                         echo '</select>
                         <select name="mastercolor" id="mastercolor" data-native-menu="false">
@@ -146,6 +146,11 @@
                                 echo '<option value="'.$result_csomaglas[$i]['cs_ID'].'">'.$result_csomaglas[$i]['cs_csomagtip'].'</option>';
                             }
                     echo '</select>
+                    <a href="#popupParis" data-rel="popup" data-position-to="window" data-transition="fade" id="popupgomb">Gomb</a>
+                    <div data-role="popup" id="popupParis" data-overlay-theme="a" data-theme="a" data-corners="false">
+                        <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>';
+                        require_once('include/szinezo.html');
+                    echo '</div>
                     </div>
                     <div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">Block C</div></div>
                 </div><!-- /grid-a -->

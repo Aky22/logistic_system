@@ -1,0 +1,1656 @@
+<script src="js/szinezo.js" type="text/javascript"></script>
+<style>
+
+#szinezo{
+	
+	position: relative;
+
+	margin: auto;
+	padding:10px;
+    padding-top: 0px;
+	width:660px;;
+	height:660px;
+	overflow:hidden;
+	
+}
+
+
+#szinek
+{
+
+	text-align:center;
+	width:160px;
+	height:650px;
+	float: left;
+	clear:both;
+	padding-left:5px;
+	padding-right:5px;
+	border:1px solid #999;
+border-radius:15px;
+overflow:hidden;
+box-shadow: -3px 3px 5px #666666;	
+}
+
+
+
+.ruhak
+{
+	position: absolute;
+
+
+
+	width: 235px;
+	
+	height:600px;
+
+left: 208px;
+overflow:hidden;
+box-shadow: -3px 3px 5px #666666;
+border:1px solid #999;
+border-radius:15px;
+}
+
+#tobbimodell{
+position:absolute;
+left:470px;
+
+border:1px solid #999;
+border-radius:15px;
+
+	width: 180px;
+	
+	height:600px;
+float: left;
+
+overflow:hidden;
+box-shadow: -3px 3px 5px #666666;	
+
+}
+
+
+
+.ruhak0
+{
+	position: absolute;
+	
+	left:0px;;
+	top:0px;
+	z-index:100;
+	background-repeat: no-repeat;
+	width:235px;
+	height:600px;
+	overflow:hidden;
+	
+}
+
+.ruhak1
+{
+	position: absolute;
+	left:0px;;
+	top:0px;
+	z-index:200;
+	background-repeat: no-repeat;
+	width:235px;
+	height:600px;
+	overflow:hidden;
+	
+}
+
+.ruhak2
+{
+	position: absolute;
+	left:0px;;
+	top:0px;
+	z-index:300;
+	background-repeat: no-repeat;
+	width:235px;
+	height:600px;
+	overflow:hidden;
+	
+}
+
+
+
+
+
+
+#mezo{
+	width:400px;
+	height:40px;
+	position:relative;
+	top:-60px;
+	left:205px;
+	z-index:50;
+    margin-bottom: -50px;
+}
+
+
+
+.szinsor{
+	
+	border:1px solid #999999;
+	border-radius:5px;
+	/*display: none;*/
+		border:1px solid #999999;
+	border-width:1px 1px 1px 1px;
+	padding:1px;
+	margin-left:3px;
+	margin-right:2px;
+	margin-top:5px;
+	font-size:0px;
+	font-family:Arial;
+	font-weight:normal;
+	width: 48px;
+	height:570px;
+	float:left;
+}
+
+.szinsor td{
+		border:1px solid #444444;
+		border-radius:5px;
+	border-width:0px 0px 1px 1px;
+	height:auto;
+	border-radius:3px;
+	cursor:pointer;
+}
+
+.szinsor th{
+	
+	border-radius:5px;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	height:16px;
+}
+
+#anyag {
+	
+	
+	text-align:center;
+	margin-left:5px;
+	padding:0px;
+	font-size:11px;
+	font-family:Arial;
+	font-weight:normal;
+	width: 150px;
+	height:570px;
+	float:left;
+	
+}
+
+#kicsik{
+
+	font-weight:bold;
+	vertical-align:bottom;
+	text-align:center;
+	
+	margin-left:0px;
+	padding:0px;
+	font-size:13px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#FFF;
+		border-spacing:10px 10px;
+	float:left;
+	
+}
+
+#kicsik td{
+	text-outline:#FFF;
+	text-shadow:#FFF;
+	font-weight:bold;
+	border-radius:10px;
+	vertical-align:bottom;
+	height:130px;
+	width:70px;
+	padding:3px;
+
+	border: 1px solid #999999;
+	cursor:pointer;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:cover;
+
+}
+
+
+#kicsik p{
+	
+	position:relative;
+	bottom:-13px;
+	background-color:#555;
+	
+	
+}
+
+#anyag th{
+	border-radius:5px;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	height:16px;
+}
+#anyag td{
+	border-radius:20px;
+	height:auto;
+	padding:3px;
+	margin: 3px;
+	border: 1px solid #999999;
+	cursor:pointer;
+}
+#anyagmenu{
+	
+	float:right;
+	width:148px;
+	height:20px;
+	padding:0px;
+	margin: 0px;
+	margin-bottom: 40px;
+}
+
+#anyagtipgomb {
+	display:inline-block;
+	position:relative;
+	left:-5px;
+width: 140px;
+
+}
+#Ama { z-index:45;}
+#Bma { z-index:50;}
+#Cma { z-index:55;}
+#Ema { z-index:60;}
+#Fma { z-index:65;}
+#Gma { z-index:70;}
+#Ima { z-index:75;}
+
+#Am0 {
+	background-image: url("");
+}
+#Am1 {
+	background-image: url("");
+	display: none;
+	}
+#Am2 {
+	background-image: url("");
+	display: none;
+}
+
+#Bm0 {
+	background-image: url("");
+}
+#Bm1 {
+	background-image: url("");
+    display:none;
+	}
+#Bm2 {
+	background-image: url("");
+	mask: url("#Cmask2");
+	-webkit-mask-image: url("revanstexmunkaruha_hu/userfiles/rotates/szinezo/C/mask2v.png");
+}
+
+#Cm0 {
+	background-image: url("");
+}
+#Cm1 {
+	background-image: url("");
+	mask: url("#Cmask1");
+	-webkit-mask-image: url("revanstexmunkaruha_hu/userfiles/rotates/szinezo/C/mask1v.png");
+	}
+#Cm2 {
+	background-image: url("");
+	mask: url("#Cmask2");
+	-webkit-mask-image: url("revanstexmunkaruha_hu/userfiles/rotates/szinezo/C/mask2v.png");
+}
+
+#Em0 {
+	background-image: url("");
+}
+#Em1 {
+	background-image: url("");
+	mask: url("#Emask1");
+	-webkit-mask-image: url("revanstexmunkaruha_hu/userfiles/rotates/szinezo/E/mask1v.png");
+	}
+#Em2 {
+	background-image: url("");
+	display: none;
+}
+
+#Fm0 {
+	background-image: url("");
+}
+#Fm1 {
+	background-image: url("");
+	mask: url("#Fmask1");
+	-webkit-mask-image: url("revanstexmunkaruha_hu/userfiles/rotates/szinezo/F/mask1v.png");
+}
+#Fm2 {
+	background-image: url("");
+	display: none;
+}
+
+
+#Gm0 {
+	background-image: url("");
+}
+#Gm1 {
+	background-image: url("");
+	mask: url("#Gmask1");
+	-webkit-mask-image: url("revanstexmunkaruha_hu/userfiles/rotates/szinezo/G/mask1v.png");
+}
+#Gm2 {
+	background-image: url("");
+	mask: url("#Gmask2");
+	-webkit-mask-image: url("revanstexmunkaruha_hu/userfiles/rotates/szinezo/G/mask2v.png");
+}
+
+
+#Im0 {
+	background-image: url("");
+}
+#Im1 {
+	background-image: url("");
+	mask: url("#Imask1");
+	-webkit-mask-image: url("revanstexmunkaruha_hu/userfiles/rotates/szinezo/I/mask1v.png");
+	}
+#Im2 {
+	background-image: url("");
+	mask: url("#Imask2");
+	-webkit-mask-image: url("revanstexmunkaruha_hu/userfiles/rotates/szinezo/I/mask2v.png");
+}
+</style>
+
+<svg height="0">
+
+  
+   <mask id="Cmask1">
+    <image width="235" height="600px" xlink:href="revanstexmunkaruha_hu/userfiles/rotates/szinezo/C/mask1v.png"> </image>
+  </mask>
+  
+   <mask id="Cmask2">
+    <image width="235" height="600px" xlink:href="revanstexmunkaruha_hu/userfiles/rotates/szinezo/C/mask2v.png"> </image>
+  </mask>
+  
+     <mask id="Emask1">
+    <image width="235" height="600px" xlink:href="revanstexmunkaruha_hu/userfiles/rotates/szinezo/E/mask1v.png"> </image>
+  </mask>
+
+  <mask id="Fmask1">
+    <image width="235" height="600px" xlink:href="revanstexmunkaruha_hu/userfiles/rotates/szinezo/F/mask1v.png"> </image>
+  </mask>
+  
+      <mask id="Gmask1">
+    <image width="235" height="600px" xlink:href="revanstexmunkaruha_hu/userfiles/rotates/szinezo/G/mask1v.png"> </image>
+  </mask>
+    <mask id="Gmask2">
+    <image width="235" height="600px" xlink:href="revanstexmunkaruha_hu/userfiles/rotates/szinezo/G/mask2v.png"></image>
+  </mask>
+  
+  <mask id="Imask1">
+    <image width="235" height="600px" xlink:href="revanstexmunkaruha_hu/userfiles/rotates/szinezo/I/mask1v.png">></image>
+  </mask>
+  
+  <mask id="Imask2">
+    <image width="235" height="600px" xlink:href="revanstexmunkaruha_hu/userfiles/rotates/szinezo/I/mask2v.png"></image>
+  </mask>
+  
+
+  
+ 
+  
+</svg>
+
+
+
+<div id="szinezo">
+	<div id="szinek">
+        <div id="anyagmenu"> <button id="anyagtipgomb" onclick="anyagokfel()" type="button" date-role="none" value="Anyagfajták" >Anyagtip</button> </div>
+    
+    
+    
+    <table id="anyag" >
+      <tbody>
+      <tr>
+        <th>Kérem válasszon! </th>
+      </tr>
+      <tr>
+        <td onclick="anyagv('b')">Pamut, 250g/m<sup>2</sup></td>
+      </tr>
+      <tr>
+        <td onclick="anyagv('s')">Pamut, 280g/m<sup>2</sup></td>
+      </tr>
+      <tr>
+        <td onclick="anyagv('p')">Pamut, 300g/m<sup>2</sup></td>
+      </tr>
+      <tr>
+        <td onclick="anyagv('j')">Kevert, 245g/m<sup>2</sup></td>
+      </tr>
+       <tr>
+        <td onclick="anyagv('w')">Kevert, 300g/m<sup>2</sup></td>
+      </tr>
+      </tbody>
+    </table> 
+    
+        <table id="teljesszinsormindigrejtett" class="rejtett" style="display:none";>
+          <tbody>
+            <tr>
+              <th>Cs&iacute;k</th>
+            </tr>
+            <tr>
+              <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+            </tr>
+            <tr>
+              <td title="02-es drapp" bgcolor="#B8A98C">02</td>
+            </tr>
+            <tr>
+              <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+            </tr>
+            <tr>
+              <td title="041-es j&oacute;ll&aacute;that&aacute;s&aacute;gi narancs" bgcolor="#FF6633">04	            </td>
+            </tr>
+            <tr>
+              <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+            </tr>
+            <tr>
+              <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+            </tr>
+            <tr>
+              <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+            </tr>
+            <tr>
+              <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+            </tr>
+            <tr>
+              <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+            </tr>
+            <tr>
+              <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+            </tr>
+            <tr>
+              <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+            </tr>
+            <tr>
+              <td title="13-as petrolk&eacute;k" bgcolor="#1D506B">13</td>
+            </tr>
+            <tr>
+              <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+            </tr>
+            <tr>
+              <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+            </tr>
+            <tr>
+              <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+            </tr>
+            <tr>
+              <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+            </tr>
+            <tr>
+              <td title="20-as s&ouml;t&eacute;t sz&uuml;rke (k&eacute;kes)" bgcolor="#5E5E6F">20</td>
+            </tr>
+            <tr>
+              <td title="21-es fekete" bgcolor="#2C3033">21</td>
+            </tr>
+            <tr>
+              <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+            </tr>
+            <tr>
+              <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+            </tr>
+            <tr>
+              <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+            </tr>
+            <tr>
+              <td title="25-os s&ouml;t&eacute;t sz&uuml;rke" bgcolor="#3F3E47">25</td>
+            </tr>
+            <tr>
+              <td title="27-es Vil&aacute;gos k&eacute;k" bgcolor="#FFFFFF">26</td>
+            </tr>
+            <tr>
+              <td title="28-as Rom&aacute;n barna" bgcolor="#583E3F">28</td>
+            </tr>
+            <tr>
+              <td title="29-es s&ouml;t&eacute;t vad&aacute;sz z&ouml;ld" bgcolor="#305246">29</td>
+            </tr>
+            <tr>
+              <td title="31-es vil&aacute;gos v&iacute;zz&ouml;ld" bgcolor="#FFFFFF">31</td>
+            </tr>
+            <tr>
+              <td title="82-es Kir&aacute;lyk&eacute;k" bgcolor="#324089">82</td>
+            </tr>
+            <tr>
+              <td title="ban&aacute;n s&aacute;rga" bgcolor="#F5C71A">_3</td>
+            </tr>
+            <tr>
+              <td title="k&ouml;z&eacute;p sz&uuml;rke (v 24-es)" bgcolor="#7B7C7D">_1</td>
+            </tr>
+            <tr>
+              <td title="sir&aacute;ly sz&uuml;rke" bgcolor="#443E3E">_2</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!--w anyaguak:-->
+        <table id="w0" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Fősz&iacute;n</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	    <tr>
+    	  
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	 
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	   <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    	   
+    	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+    	   
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+  	      </tr>
+    	    
+            <tr>
+              <td title="ban&aacute;n s&aacute;rga" bgcolor="#F5C71A">_3</td>
+            </tr>
+      
+            <tr>
+              <td title="sir&aacute;ly sz&uuml;rke" bgcolor="#443E3E">_2</td>
+  	      </tr>
+      </tbody>
+  	  </table>
+      
+       <table id="w1" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Elütő</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	    <tr>
+    	  
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	 
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	   <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    	   
+    	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+    	   
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+  	      </tr>
+    	    
+            <tr>
+              <td title="ban&aacute;n s&aacute;rga" bgcolor="#F5C71A">_3</td>
+            </tr>
+      
+            <tr>
+              <td title="sir&aacute;ly sz&uuml;rke" bgcolor="#443E3E">_2</td>
+  	      </tr>
+      </tbody>
+  	  </table>
+      
+       <table id="w2" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Csík</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	    <tr>
+    	  
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	 
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	   <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    	   
+    	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+    	   
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+  	      </tr>
+    	    
+            <tr>
+              <td title="ban&aacute;n s&aacute;rga" bgcolor="#F5C71A">_3</td>
+            </tr>
+      
+            <tr>
+              <td title="sir&aacute;ly sz&uuml;rke" bgcolor="#443E3E">_2</td>
+  	      </tr>
+      </tbody>
+  	  </table>
+      
+      <!--b anyagok-->
+      
+      <table id="b0" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Fősz&iacute;n</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+  	      </tr>
+       	    <tr>
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    	  	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="20-as s&ouml;t&eacute;t sz&uuml;rke (k&eacute;kes)" bgcolor="#5E5E6F">20</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	 <tr>
+              <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+            </tr>
+    	    <tr>
+    	      <td title="25-os s&ouml;t&eacute;t sz&uuml;rke" bgcolor="#3F3E47">25</td>
+  	      </tr>
+
+      </tbody>
+  	  </table>
+       <table id="b1" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Elütő</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+  	      </tr>
+       	    <tr>
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    	  	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="20-as s&ouml;t&eacute;t sz&uuml;rke (k&eacute;kes)" bgcolor="#5E5E6F">20</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	 <tr>
+              <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+            </tr>
+    	    <tr>
+    	      <td title="25-os s&ouml;t&eacute;t sz&uuml;rke" bgcolor="#3F3E47">25</td>
+  	      </tr>
+
+      </tbody>
+  	  </table>
+       <table id="b2" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Csík</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+  	      </tr>
+       	    <tr>
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    	  	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="20-as s&ouml;t&eacute;t sz&uuml;rke (k&eacute;kes)" bgcolor="#5E5E6F">20</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	 <tr>
+              <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+            </tr>
+    	    <tr>
+    	      <td title="25-os s&ouml;t&eacute;t sz&uuml;rke" bgcolor="#3F3E47">25</td>
+  	      </tr>
+
+      </tbody>
+  	  </table>
+      
+      <!--munkaruha s anyagok-->
+      
+      <table id="s0" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Fősz&iacute;n</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="02-es drapp" bgcolor="#B8A98C">02</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="13-as petrolk&eacute;k" bgcolor="#1D506B">13</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="20-as s&ouml;t&eacute;t sz&uuml;rke (k&eacute;kes)" bgcolor="#5E5E6F">20</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+  	      </tr>
+
+    	    <tr>
+    	      <td title="29-es s&ouml;t&eacute;t vad&aacute;sz z&ouml;ld" bgcolor="#305246">29</td>
+  	      </tr>
+    
+      </tbody>
+  	  </table>
+      
+      <table id="s1" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Elütő</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="02-es drapp" bgcolor="#B8A98C">02</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="13-as petrolk&eacute;k" bgcolor="#1D506B">13</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="20-as s&ouml;t&eacute;t sz&uuml;rke (k&eacute;kes)" bgcolor="#5E5E6F">20</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+  	      </tr>
+
+    	    <tr>
+    	      <td title="29-es s&ouml;t&eacute;t vad&aacute;sz z&ouml;ld" bgcolor="#305246">29</td>
+  	      </tr>
+    
+      </tbody>
+  	  </table>
+      
+      <table id="s2" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Csík</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="02-es drapp" bgcolor="#B8A98C">02</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="13-as petrolk&eacute;k" bgcolor="#1D506B">13</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="20-as s&ouml;t&eacute;t sz&uuml;rke (k&eacute;kes)" bgcolor="#5E5E6F">20</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+  	      </tr>
+
+    	    <tr>
+    	      <td title="29-es s&ouml;t&eacute;t vad&aacute;sz z&ouml;ld" bgcolor="#305246">29</td>
+  	      </tr>
+    
+      </tbody>
+  	  </table>
+      
+       <!--munkaruha p anyagok-->
+      
+      <table id="p0" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Fősz&iacute;n</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	  <tr>
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    
+    	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+  
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+  	      </tr>
+       </tbody>
+  	  </table>
+      
+            <table id="p1" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Elütő</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	  <tr>
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    
+    	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+  
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+  	      </tr>
+       </tbody>
+  	  </table>
+            <table id="p2" class="szinsor">
+   	    <tbody>
+    	    <tr>
+    	      <th>Csík</th>
+  	      </tr>
+    	    <tr>
+    	      <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+  	      </tr>
+    	  <tr>
+    	      <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+  	      </tr>
+    	
+    	    <tr>
+    	      <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+  	      </tr>
+    
+    	    <tr>
+    	      <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+  	      </tr>
+  
+    	    <tr>
+    	      <td title="21-es fekete" bgcolor="#2C3033">21</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+  	      </tr>
+    	    <tr>
+    	      <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+  	      </tr>
+       </tbody>
+  	  </table>
+      
+   <!--j anyag kevert 245g-->
+         <table id="j0" class="szinsor">
+          <tbody>
+            <tr>
+              <th>Főszín</th>
+            </tr>
+            <tr>
+              <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+            </tr>
+            <tr>
+              <td title="02-es drapp" bgcolor="#B8A98C">02</td>
+            </tr>
+            <tr>
+              <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+            </tr>
+            <tr>
+              <td title="041-es j&oacute;ll&aacute;that&aacute;s&aacute;gi narancs" bgcolor="#FF6633">04	            </td>
+            </tr>
+            <tr>
+              <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+            </tr>
+            <tr>
+              <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+            </tr>
+            <tr>
+              <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+            </tr>
+            <tr>
+              <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+            </tr>
+            <tr>
+              <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+            </tr>
+            <tr>
+              <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+            </tr>
+            <tr>
+              <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+            </tr>
+            <tr>
+              <td title="13-as petrolk&eacute;k" bgcolor="#1D506B">13</td>
+            </tr>
+            <tr>
+              <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+            </tr>
+            <tr>
+              <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+            </tr>
+            <tr>
+              <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+            </tr>
+            <tr>
+              <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+            </tr>
+          
+            <tr>
+              <td title="21-es fekete" bgcolor="#2C3033">21</td>
+            </tr>
+            <tr>
+              <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+            </tr>
+            <tr>
+              <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+            </tr>
+            <tr>
+              <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+            </tr>
+            <tr>
+              <td title="25-os s&ouml;t&eacute;t sz&uuml;rke" bgcolor="#3F3E47">25</td>
+            </tr>
+            
+            <tr>
+              <td title="28-as Rom&aacute;n barna" bgcolor="#583E3F">28</td>
+            </tr>
+           
+            <tr>
+              <td title="ban&aacute;n s&aacute;rga" bgcolor="#F5C71A">_3</td>
+            </tr>
+            <tr>
+              <td title="k&ouml;z&eacute;p sz&uuml;rke (v 24-es)" bgcolor="#7B7C7D">_1</td>
+            </tr>
+      
+          </tbody>
+        </table>
+        
+                 <table id="j1" class="szinsor">
+          <tbody>
+            <tr>
+              <th>Elütő</th>
+            </tr>
+            <tr>
+              <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+            </tr>
+            <tr>
+              <td title="02-es drapp" bgcolor="#B8A98C">02</td>
+            </tr>
+            <tr>
+              <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+            </tr>
+            <tr>
+              <td title="041-es j&oacute;ll&aacute;that&aacute;s&aacute;gi narancs" bgcolor="#FF6633">04	            </td>
+            </tr>
+            <tr>
+              <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+            </tr>
+            <tr>
+              <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+            </tr>
+            <tr>
+              <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+            </tr>
+            <tr>
+              <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+            </tr>
+            <tr>
+              <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+            </tr>
+            <tr>
+              <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+            </tr>
+            <tr>
+              <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+            </tr>
+            <tr>
+              <td title="13-as petrolk&eacute;k" bgcolor="#1D506B">13</td>
+            </tr>
+            <tr>
+              <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+            </tr>
+            <tr>
+              <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+            </tr>
+            <tr>
+              <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+            </tr>
+            <tr>
+              <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+            </tr>
+          
+            <tr>
+              <td title="21-es fekete" bgcolor="#2C3033">21</td>
+            </tr>
+            <tr>
+              <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+            </tr>
+            <tr>
+              <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+            </tr>
+            <tr>
+              <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+            </tr>
+            <tr>
+              <td title="25-os s&ouml;t&eacute;t sz&uuml;rke" bgcolor="#3F3E47">25</td>
+            </tr>
+            
+            <tr>
+              <td title="28-as Rom&aacute;n barna" bgcolor="#583E3F">28</td>
+            </tr>
+           
+            <tr>
+              <td title="ban&aacute;n s&aacute;rga" bgcolor="#F5C71A">_3</td>
+            </tr>
+            <tr>
+              <td title="k&ouml;z&eacute;p sz&uuml;rke (v 24-es)" bgcolor="#7B7C7D">_1</td>
+            </tr>
+      
+          </tbody>
+        </table>
+        
+                 <table id="j2" class="szinsor">
+          <tbody>
+            <tr>
+              <th>Csík</th>
+            </tr>
+            <tr>
+              <td title="01-esfeh&eacute;r" bgcolor="#F2F2F2">01</td>
+            </tr>
+            <tr>
+              <td title="02-es drapp" bgcolor="#B8A98C">02</td>
+            </tr>
+            <tr>
+              <td title="03-as citrom s&aacute;rga" bgcolor="#FCEB12">03</td>
+            </tr>
+            <tr>
+              <td title="041-es j&oacute;ll&aacute;that&aacute;s&aacute;gi narancs" bgcolor="#FF6633">04	            </td>
+            </tr>
+            <tr>
+              <td title="04-es narancss&aacute;rga" bgcolor="#FB6236">04</td>
+            </tr>
+            <tr>
+              <td title="05-&ouml;s piros" bgcolor="#FF0000">05</td>
+            </tr>
+            <tr>
+              <td title="06-os bord&oacute;" bgcolor="#8A0003">06</td>
+            </tr>
+            <tr>
+              <td title="07-es aralk&eacute;k" bgcolor="#1278BA">07</td>
+            </tr>
+            <tr>
+              <td title="081-es kir&aacute;lyk&eacute;k" bgcolor="#324089">81</td>
+            </tr>
+            <tr>
+              <td title="09-es t&uuml;rkiz k&eacute;k" bgcolor="#0067AD">09</td>
+            </tr>
+            <tr>
+              <td title="11-es s&ouml;t&eacute;tk&eacute;k" bgcolor="#2D355A">11</td>
+            </tr>
+            <tr>
+              <td title="13-as petrolk&eacute;k" bgcolor="#1D506B">13</td>
+            </tr>
+            <tr>
+              <td title="14-es fűz&ouml;ld" bgcolor="#018752">14</td>
+            </tr>
+            <tr>
+              <td title="15-&ouml;s fenyőz&ouml;ld" bgcolor="#015A60">15</td>
+            </tr>
+            <tr>
+              <td title="16-os tosca z&ouml;ld" bgcolor="#027262">16</td>
+            </tr>
+            <tr>
+              <td title="18-as oliva z&ouml;ld" bgcolor="#595F55">18</td>
+            </tr>
+          
+            <tr>
+              <td title="21-es fekete" bgcolor="#2C3033">21</td>
+            </tr>
+            <tr>
+              <td title="22-es vil&aacute;gos sz&uuml;rke" bgcolor="#8A9090">22</td>
+            </tr>
+            <tr>
+              <td title="23-as vad&aacute;sz z&ouml;ld" bgcolor="#36584A">23</td>
+            </tr>
+            <tr>
+              <td title="24-es k&ouml;z&eacute;p sz&uuml;rke" bgcolor="#67686A">24</td>
+            </tr>
+            <tr>
+              <td title="25-os s&ouml;t&eacute;t sz&uuml;rke" bgcolor="#3F3E47">25</td>
+            </tr>
+            
+            <tr>
+              <td title="28-as Rom&aacute;n barna" bgcolor="#583E3F">28</td>
+            </tr>
+           
+            <tr>
+              <td title="ban&aacute;n s&aacute;rga" bgcolor="#F5C71A">_3</td>
+            </tr>
+            <tr>
+              <td title="k&ouml;z&eacute;p sz&uuml;rke (v 24-es)" bgcolor="#7B7C7D">_1</td>
+            </tr>
+      
+          </tbody>
+        </table>
+
+      
+      
+        
+    </div>
+    
+  
+    	<div id="Ama" class="ruhak">&nbsp;
+            <div id="Am0" class="ruhak0">&nbsp;
+            </div>
+            <div id="Am1" class="ruhak1">&nbsp;
+            </div>
+            <div id="Am2" class="ruhak2">&nbsp;
+            </div>
+            
+    	</div>
+        <div id="Bma" class="ruhak">&nbsp;
+         <div id="Bm0" class="ruhak0">&nbsp;
+            </div>
+            <div id="Bm1" class="ruhak1">&nbsp;
+            </div>
+            <div id="Bm2" class="ruhak2">&nbsp;
+            </div>
+    	</div>
+        
+    	<div id="Cma" class="ruhak">&nbsp;
+         <div id="Cm0" class="ruhak0">&nbsp;
+            </div>
+            <div id="Cm1" class="ruhak1">&nbsp;
+            </div>
+            <div id="Cm2" class="ruhak2">&nbsp;
+            </div>
+    	</div>
+        <div id="Ema" class="ruhak">&nbsp;
+         <div id="Em0" class="ruhak0">&nbsp;
+            </div>
+            <div id="Em1" class="ruhak1">&nbsp;
+            </div>
+            <div id="Em2" class="ruhak2">&nbsp;
+            </div>
+    	</div>
+        <div id="Fma" class="ruhak">&nbsp;
+         <div id="Fm0" class="ruhak0">&nbsp;
+            </div>
+            <div id="Fm1" class="ruhak1">&nbsp;
+            </div>
+            <div id="Fm2" class="ruhak2">&nbsp;
+            </div>
+    	</div>
+        <div id="Gma" class="ruhak">&nbsp;
+         <div id="Gm0" class="ruhak0">&nbsp;
+            </div>
+            <div id="Gm1" class="ruhak1">&nbsp;
+            </div>
+            <div id="Gm2" class="ruhak2">&nbsp;
+            </div>
+    	</div>
+        <div id="Ima" class="ruhak">&nbsp;
+         <div id="Im0" class="ruhak0">&nbsp;
+            </div>
+            <div id="Im1" class="ruhak1">&nbsp;
+            </div>
+            <div id="Im2" class="ruhak2">&nbsp;
+            </div>
+    	</div>
+     
+    
+    
+<div id="tobbimodell">
+
+    <table id="kicsik" >
+
+      <tbody>
+      
+      <tr>
+        <td background="http://revanstexmunkaruha.hu/revanstexmunkaruha_hu/userfiles/images/munkaruha_amodel.jpg" onclick="valaszt('A')"><p>A-modell</p></td>
+         <td background="http://revanstexmunkaruha.hu/revanstexmunkaruha_hu/userfiles/images/munkaruha_bmodell.jpg" onclick="valaszt('B')"><p>B-modell</p></td></tr>
+        <tr>
+        <td background="http://revanstexmunkaruha.hu/revanstexmunkaruha_hu/userfiles/images/munkaruha_cmodell.jpg" onclick="valaszt('C')"><p>C-modell</p></td>
+      
+        <td background="http://revanstexmunkaruha.hu/revanstexmunkaruha_hu/userfiles/images/munkaruha_emodell.jpg" onclick="valaszt('E')"><p>E-modell</p></td> </tr>
+        <tr>
+        <td background="http://revanstexmunkaruha.hu/revanstexmunkaruha_hu/userfiles/images/munkaruha_fmodell.jpg" onclick="valaszt('F')"><p>F-modell</p></td>
+     
+        <td background="http://revanstexmunkaruha.hu/revanstexmunkaruha_hu/userfiles/images/munkaruha_gmodell.jpg" onclick="valaszt('G')"><p>G-modell</p></td></tr>
+        <tr>
+        <td background="http://revanstexmunkaruha.hu/revanstexmunkaruha_hu/userfiles/images/munkaruha_imodell.jpg" onclick="valaszt('I')"><p>I-modell</p></td>
+      </tr>
+      
+      </tbody>
+    </table> 
+
+</div>
+
+
+</div>
+<div id="mezo">
+<input title="dfgdf" class="req_1" name="ruhakod" id="ruhakod"  value="Ax-00-00-00" style="width:300px;" type="text">
+</div>
